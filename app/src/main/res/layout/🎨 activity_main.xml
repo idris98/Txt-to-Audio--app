@@ -1,1 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4FF"
+    android:padding="16dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📄 TXT → Audio"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matn faylini ovozga aylantiruvchi ilova"
+            android:textSize="13sp"
+            android:textColor="#888"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Pick File Button -->
+        <Button
+            android:id="@+id/btnPickFile"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📂  TXT Fayl Tanlash"
+            android:textSize="16sp"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#FFF"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- File Name -->
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fayl tanlanmagan"
+            android:textSize="13sp"
+            android:textColor="#555"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Preview Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matn ko'rinishi:"
+                android:textStyle="bold"
+                android:textColor="#3F51B5"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(fayl tanlangach ko'rinadi)"
+                android:textSize="12sp"
+                android:textColor="#666"
+                android:maxLines="6"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <!-- Speed -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tezlik: 1.0x"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginBottom="4dp"/>
+
+            <SeekBar
+                android:id="@+id/sbSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Pitch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/tvPitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ohang: 1.0x"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginBottom="4dp"/>
+
+            <SeekBar
+                android:id="@+id/sbPitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnSpeak"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="▶ O'qish"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFF"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="⏹ Stop"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFF"/>
+        </LinearLayout>
+
+        <!-- Save Audio -->
+        <Button
+            android:id="@+id/btnSaveAudio"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="💾  Audio fayl sifatida saqlash (WAV)"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFF"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Progress -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tayyor."
+            android:textSize="13sp"
+            android:textColor="#3F51B5"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
